@@ -20,11 +20,11 @@ public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append(name).append("\nKnown for:\n");
     for (String known : knownFor) {
-        sb.append("  - ").append(known).append("\n");
+        sb.append("    ").append(known).append("\n");
     }
     sb.append("Awards:\n");
     for (Award award : awards) {
-        sb.append("  - ").append(award).append("\n");
+        sb.append("    ").append(award).append("\n");
     }
     return sb.toString();
 }
