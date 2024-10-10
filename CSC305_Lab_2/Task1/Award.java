@@ -1,8 +1,8 @@
 package CSC305_Lab_2.Task1;
 
-class Award {
-private String name;
-private int year;
+public class Award {
+private final String name;
+private final int year;
 
 public Award(String name, int year) {
     this.name = name;

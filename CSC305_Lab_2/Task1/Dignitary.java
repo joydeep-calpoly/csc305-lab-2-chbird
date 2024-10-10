@@ -2,11 +2,11 @@ package CSC305_Lab_2.Task1;
 
 import java.util.List;
 
-class Dignitary
+public class Dignitary
 {
-private String name;
-private List<String> knownFor;
-private List<Award> awards;
+private final String name;
+private final List<String> knownFor;
+private final List<Award> awards;
 
 public Dignitary(String name, List<String> knownFor, List<Award> awards)
 {
