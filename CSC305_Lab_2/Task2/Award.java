@@ -1,5 +1,6 @@
 package CSC305_Lab_2.Task2;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Award {
@@ -10,9 +11,10 @@ private final String name;
 @JsonProperty("year")
 private final int year;
 
-public Award() {
-    this.name = null;
-    this.year = 0;
+@JsonCreator
+public Award(@JsonProperty("name") String name, @JsonProperty("year") int year) {
+    this.name = name;
+    this.year = year;
 }
 
 @Override
