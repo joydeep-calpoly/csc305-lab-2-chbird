@@ -2,12 +2,9 @@ package CSC305_Lab_2.Task2;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.json.JSONArray;
-
-import java.util.Collections;
 import java.util.List;
 
-public class Dignitary {
+class Dignitary {
 
 @JsonProperty("name")
 private final String name;
@@ -19,12 +16,12 @@ private final List<String> knownFor;
 private final List<Award> awards;
 
 @JsonCreator
-public Dignitary(@JsonProperty("name") String name,
-        @JsonProperty("knownFor") List<String> knownfor,
+private Dignitary(@JsonProperty("name") String name,
+        @JsonProperty("knownFor") List<String> knownFor,
         @JsonProperty("awards") List<Award> awards)
 {
     this.name = name;
-    this.knownFor = knownfor;
+    this.knownFor = knownFor;
     this.awards = awards;
 }
 

@@ -3,7 +3,7 @@ package CSC305_Lab_2.Task2;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Award {
+class Award {
 
 @JsonProperty("name")
 private final String name;
@@ -12,7 +12,7 @@ private final String name;
 private final int year;
 
 @JsonCreator
-public Award(@JsonProperty("name") String name, @JsonProperty("year") int year) {
+private Award(@JsonProperty("name") String name, @JsonProperty("year") int year) {
     this.name = name;
     this.year = year;
 }
