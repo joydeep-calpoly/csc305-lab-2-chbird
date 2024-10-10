@@ -1,19 +1,26 @@
 package CSC305_Lab_2.Task2;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.util.Collections;
 import java.util.List;
 
 public class Dignitary {
 
 @JsonProperty("name")
-private String name;
+private final String name;
 
 @JsonProperty("knownFor")
-private List<String> knownFor;
+private final List<String> knownFor;
 
 @JsonProperty("awards")
-private List<Award> awards;
-public Dignitary() {}
+private final List<Award> awards;
+
+public Dignitary() {
+    this.name = null;
+    this.knownFor = Collections.emptyList();
+    this.awards = Collections.emptyList();
+}
 
 @Override
 public String toString() {

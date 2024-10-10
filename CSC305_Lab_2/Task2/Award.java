@@ -1,15 +1,19 @@
 package CSC305_Lab_2.Task2;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-public class Award
-{
+
+public class Award {
 
 @JsonProperty("name")
-private String name;
-@JsonProperty("year")
-private int year;
+private final String name;
 
-public Award() {}
+@JsonProperty("year")
+private final int year;
+
+public Award() {
+    this.name = null;
+    this.year = 0;
+}
 
 @Override
 public String toString() {
